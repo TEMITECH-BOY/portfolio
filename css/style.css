@@ -7,8 +7,10 @@
 html{
     scroll-behavior: smooth;
 }
+
 .navbar{
-    width: 100%;
+    width: 100vw;
+    margin: 0 auto;
     height: 140px;
     position: fixed;
     background:  #f2f3f7;
@@ -18,6 +20,29 @@ html{
     overflow: hidden;
     padding: 0 16px;
     z-index: 1;
+}
+
+@media  screen and (max-width: 768px) {
+    .navbar {
+        width: 100vw;
+        flex-wrap: wrap;
+    }
+
+    .main{
+        width: 323px;
+        height: 400px;
+        /* margin: 0 auto; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        border: 1px solid black; 
+        color: #ffffff;
+        align-items: center;
+        position: absolute;
+        top: 30%;
+        left: 50%;
+    }
+
 }
 .navbar ul{
     display: flex;
@@ -45,14 +70,15 @@ html{
 }
 .navbar ul li a:hover{
     color: white;
+    border-radius: 30px;
     background-color: #6c758f;
     box-shadow:  0 0 10px white;
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
 } 
 .button-radius1{
     background-color:transparent; 
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
      background-image: url('../IMAGES/facebook\ \(3\).png');
@@ -72,8 +98,8 @@ html{
 }
 .button-radius2{ 
     background-color:transparent;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
     background-image: url('../IMAGES/twitter\ \(1\).png');
@@ -87,8 +113,8 @@ html{
 .button-radius3{ 
     background-color:transparent;
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     background-image: url('../IMAGES/instagram\ \(1\).png');
     background-position: center;
@@ -116,6 +142,8 @@ html{
 
 /* HOME SECTION */
 #home{
+     width: 100vw;
+    margin: 0 auto;
     display: flex;
     position: relative;
     flex-direction: column;
@@ -130,7 +158,7 @@ html{
     content: "";
     background: url(../images/WhatsApp\ Image\ 2023-02-20\ at\ 11.28.45\ PM.jpeg) no-repeat center ;
     height: 700px;
-    width: 100%;
+    width: 100vw; 
     z-index: -1;
     opacity: 2;
     
@@ -150,6 +178,8 @@ html{
     top: 30%;
     left: 50%;
 }
+
+
 .headings{
     font-family:'Bellota Text', display; 
     font-size: 3.6rem;
@@ -183,13 +213,14 @@ html{
 /* about me */
 
 #about{
-    width: 100%;
+    width: 100vw;
+    margin: 0 auto;
     height: auto;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 20px;
-    margin-bottom: 50px;
+    
 }
 .pic{
      width: 1000px;
@@ -225,14 +256,15 @@ html{
     line-height: 1;
 }
 #portfolio{
-    width: 100%;
+    width: 100vw;
+    margin: 0 auto;
     height: auto;
     background-color:  #f2f3f7;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 20px;
-    margin-bottom: 50px;
+
 }  
 #portfolio .headings{
     color:#6c758f;
@@ -260,14 +292,15 @@ html{
     z-index: 2;
 }
 #services{
-    width: 100%;
+    width: 100vw;
+    margin: 0 auto;
     height: auto;
     background-color:  #f2f3f7;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 20px;
-    margin-bottom: 50px;
+
 
 }
 .headings{
@@ -282,6 +315,7 @@ html{
 .box-content{
     display: flex;
     flex-direction: column;
+    justify-content: space-around; 
     width: 350px;
     height: 450px;
     border: 1px solid #6c758f;
@@ -295,27 +329,36 @@ html{
     
 
 }
-  .box-content .headings:hover{
-    color: #ffffff;
-}  
-
- .box-content:hover{
-   cursor: pointer;
-   background-color: #6c758f;
-   color: #ffffff;
-   border: none; 
+.box-content.sub-head{
+    font-family:'Bellota Text', display; 
+    font-size: 2.4rem;
+    text-align: center;
+    margin: 40px 0px;
+    color: #6c758f;
+    
+}
+.box-content.s-intro{font-family:'Bellota Text', display; 
+    font-size: 1.1rem;
+    text-align: left;
+    margin: 0px 10px;
+    color: #6c758f;
+    
 
 }
+.box-content:hover{
+     background-color: #6c758f;
+     color: #ffffff;
+ } 
+ 
 /* contact */
 #contact{
-     width: 100%;
-    height: auto;
-    background-color:  #6c758f;
+     width: 100vw;
+     margin: 0 auto;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 20px;
-    margin-bottom: 50px;
     color: #ffffff;
 
 }
@@ -330,6 +373,7 @@ html{
     flex-direction: column;
     box-sizing: border-box;
     align-items: center;
+    background-color: #6c758f;
     /* margin: 20px 0px; */
 }
 .input{
