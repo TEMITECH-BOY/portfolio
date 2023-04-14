@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 html{
     scroll-behavior: smooth;
@@ -17,33 +18,16 @@ html{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    overflow: hidden;
     padding: 0 16px;
     z-index: 1;
 }
-
-@media  screen and (max-width: 768px) {
-    .navbar {
-        width: 100vw;
-        flex-wrap: wrap;
-    }
-
-    .main{
-        width: 323px;
-        height: 400px;
-        /* margin: 0 auto; */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        border: 1px solid black; 
-        color: #ffffff;
-        align-items: center;
-        position: absolute;
-        top: 30%;
-        left: 50%;
-    }
-
+.navbar-title{
+    display: none;
 }
+.back-icon{
+    display: none;
+}
+
 .navbar ul{
     display: flex;
     justify-content:space-evenly;
@@ -68,6 +52,7 @@ html{
     transition: all .5s ease;
 
 }
+
 .navbar ul li a:hover{
     color: white;
     border-radius: 30px;
@@ -75,13 +60,16 @@ html{
     box-shadow:  0 0 10px white;
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
 } 
+.navbar ul li a:active{
+    color: #47b5ed;
+}
 .button-radius1{
     background-color:transparent; 
     width: 50px;
     height: 50px;
     border-radius: 50%;
     box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
-     background-image: url('../IMAGES/facebook\ \(3\).png');
+    background-image: url('../IMAGES/facebook\ \(3\).png');
     background-position: center;
     background-size:40px;
     background-repeat: no-repeat;
@@ -95,6 +83,9 @@ html{
     width: 50%;
     height: 50%;
     
+}
+img{
+    margin: 15px 15px;
 }
 .button-radius2{ 
     background-color:transparent;
@@ -147,16 +138,14 @@ html{
     display: flex;
     position: relative;
     flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.5);
-    height: 800px;
-    justify-content: center;
-    align-items: center;
+     background-color: rgba(0, 0, 0, 0.5); 
+    height: 700px;
     color: white;
     
 }
 #home::before{
     content: "";
-    background: url(../images/WhatsApp\ Image\ 2023-02-20\ at\ 11.28.45\ PM.jpeg) no-repeat center ;
+     background: url(../images/WhatsApp\ Image\ 2023-02-20\ at\ 11.28.45\ PM.jpeg) no-repeat center ; 
     height: 700px;
     width: 100vw; 
     z-index: -1;
@@ -167,7 +156,6 @@ html{
 .main{
     width: 600px;
     height: 400px;
-    /* margin: 0 auto; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -222,15 +210,8 @@ html{
     padding: 20px;
     
 }
-.pic{
-     width: 1000px;
-     height: auto;
-     margin: 0 auto;
-     display: flex;
-     justify-content:space-between;
-     /* align-items: center;
-     justify-items: center; */
-}
+
+
 #about .headings{
     color: #6c758f;
 }
@@ -270,7 +251,7 @@ html{
     color:#6c758f;
 }
 #portfolio .container{
-    width: 1300px;
+    width: auto;
     display: flex;
     justify-content: space-between;
     padding: 20px;
@@ -363,7 +344,7 @@ html{
 
 }
 #contact .headings{
-    color: #ffffff;
+    color: #6c758f;
 }
 .form{
     width: 1000px;
@@ -374,7 +355,7 @@ html{
     box-sizing: border-box;
     align-items: center;
     background-color: #6c758f;
-    /* margin: 20px 0px; */
+    
 }
 .input{
     padding: 12px;
@@ -402,4 +383,609 @@ html{
         cursor: pointer;
         box-shadow: 0 0 10px white;
     }
+
+ @media(min-width: 900px) and (max-width: 1200px){
+    #contact{
+        width: 100%;
+      }
+    #contact .headings{
+        font-size: 2.4rem;
+    }
+        .form {
+            width: 700px;
+            margin: 0 auto;
+            height: auto;
+        
+        }
+        #msg{
+            width: auto;
+    
+        }
+    
+        #services{
+            width: 100%;
+            
+    
+    
+        }
+        #services .headings{
+            font-size: 2.4rem;
+        }
+        #services .row{
+            width: 800px;
+            display: flex;
+        }
+        .box-content{
+            width: 250px;
+            height: 300px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+        #portfolio{
+            width: 100%;
+    
+        }
+        #portfolio .headings{
+            font-size: 2.4rem;
+        }
+        #portfolio .container{
+            width: 800px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px auto;
+        }
+        #portfolio .container .box{
+            margin-bottom: 25px;
+            width: 250px;
+            height: 250px;
+            
+        }
+        #about{
+            width: 100%;
+    
+        }
+        #about .headings{
+            font-size: 2.4rem;
+        }
+        
+        #about .pic{
+            width: 800px;
+            display: flex;
+        
+        }
+        .pic-holder{
+            width: 400px;
+            height: 300px;
+            
+            
+        }
+        #intro h2{
+            font-size: 1.2rem;
+        }
+    
+        #intro p{
+            font-size: 1.1rem;
+            letter-spacing: normal;
+            line-height: normal;
+        }
+        #home{
+            width: 100%;
+        }
+        #home::before{
+            width: 100%;
+        }
+        .main{
+            width: 300px;
+            height: 200px;
+            position: absolute;
+            top: 40%;
+            left: 30%;
+        }
+        .main .headings{
+            font-size: 2.4rem;
+        }
+         .navbar{
+            width: 100%;
+            display: flex;
+        }
+      
+        
+        .navbar-title{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            
+        } 
+        .navbar-title h1{
+            font-size: 30px;
+            font-weight: bold;
+            color: #47b5ed;
+            margin: 27px 30px;
+    
+        }
+        #menu-icon{
+            display: block;
+    
+        }
+        .navbar-icons{
+            width: 400px;
+            height: 100vh;
+            display: flex;
+            justify-content: space-between; 
+            border: 2px solid #6c758f;
+            border-radius: 10px;
+            position: absolute;
+            top: 2%;
+            right:-100%;
+            background:#f2f3f7;
+            transition: all .50s ease;
+            overflow: visible;
+            margin: 112px 0px;
+        }
+        .navbar-icons.open{
+            right: 0;
+        }
+    
+        
+        .navbar ul {
+         display: block;
+            
+        }
+    
+        .navbar ul li{
+            display: flex;
+    
+        }.navbar ul li a{
+            transition: all .5s ease;
+        
+        }
+}   
+@media (min-width: 768px) and (max-width: 900px){
+  #contact{
+    width: 100%;
+  }
+#contact .headings{
+    font-size: 2.4rem;
+}
+    .form {
+        width: 500px;
+        margin: 0 auto;
+        height: auto;
+    
+    }
+    #msg{
+        width: auto;
+
+    }
+
+    #services{
+        width: 100%;
+        
+
+
+    }
+    #services .headings{
+        font-size: 2.4rem;
+    }
+    #services .row{
+        width: 400px;
+        display: block;
+    }
+    .box-content{
+        width: 250px;
+        height: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    #portfolio{
+        width: 100%;
+
+    }
+    #portfolio .headings{
+        font-size: 2.4rem;
+    }
+    #portfolio .container{
+        width: 500px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        margin: 20px auto;
+    }
+    #portfolio .container .box{
+        margin-bottom: 25px;
+        width: 200px;
+        height: 200px;
+    }
+    #about{
+        width: 100%;
+
+    }
+    #about .headings{
+        font-size: 2.4rem;
+    }
+   
+    #about .pic{
+        width: 345px;
+        display: flex;
+        flex-direction: column;
+    }
+  
+    #intro h2{
+        font-size: 1.2rem;
+    }
+    #intro{
+        padding: 0px;
+    }
+    #intro p{
+        font-size: 1.1rem;
+        letter-spacing: normal;
+        line-height: normal;
+    }
+    #home{
+        width: 100%;
+    }
+    #home::before{
+        width: 100%;
+    }
+    .main{
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        top: 40%;
+        left: 30%;
+    }
+    .main .headings{
+        font-size: 2.4rem;
+    }
+     .navbar{
+        width: 100%;
+        display: flex;
+    }
+  
+    
+    .navbar-title{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        
+    } 
+    .navbar-title h1{
+        font-size: 30px;
+        font-weight: bold;
+        color: #47b5ed;
+        margin: 27px 30px;
+
+    }
+    #menu-icon{
+        display: block;
+
+    }
+    .navbar-icons{
+        width: 400px;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between; 
+        border: 2px solid #6c758f;
+        border-radius: 10px;
+        position: absolute;
+        top: 2%;
+        right:-100%;
+        background:#f2f3f7;
+        transition: all .50s ease;
+        overflow: visible;
+        margin: 112px 0px;
+    }
+    .navbar-icons.open{
+        right: 0;
+    }
+
+    
+    .navbar ul {
+     display: block;
+        
+    }
+
+    .navbar ul li{
+        display: flex;
+
+    }.navbar ul li a{
+        transition: all .5s ease;
+    
+    }
+}@media  (min-width: 400px) and (max-width: 600px) {
+    #contact{
+      width: 100%;
+    }
+  #contact .headings{
+      font-size: 2.4rem;
+  }
+      .form {
+          width: 320px;
+          margin: 0 auto;
+          height: auto;
+      
+      }
+  
+      #services{
+          width: 100%;
+          
+  
+  
+      }
+      #services .headings{
+          font-size: 2.4rem;
+      }
+      #services .row{
+          width: 320px;
+          display: block;
+      }
+      .box-content{
+          width: 200px;
+          height: 250px;
+          margin: 0 auto;
+          margin-bottom: 20px;
+      }
+      #portfolio{
+          width: 100%;
+  
+      }
+      #portfolio .headings{
+          font-size: 2.4rem;
+      }
+      #portfolio .container{
+          width: 320px;
+          margin: 0 auto;
+          flex-wrap: wrap;
+          margin: 20px auto;
+          gap: 10px;
+      }
+      #portfolio .container .box{
+          width: 200px;
+          height: 200px;
+          margin: 0 auto;
+
+      }
+      #about{
+          width: 100%;
+  
+      }
+      #about .headings{
+          font-size: 2.4rem;
+      }
      
+      
+     
+      
+      #intro h2{
+          font-size: 1.2rem;
+      }
+      #intro p{
+          font-size: 1.1rem;
+          letter-spacing: normal;
+          line-height: normal;
+      }
+      #home{
+          width: 100%;
+      }
+      #home::before{
+          width: 100%;
+      }
+      .main{
+          width: 300px;
+          height: 200px;
+          position: absolute;
+          top: 40%;
+          left: 20%;
+      }
+      .main .headings{
+          font-size: 2.4rem;
+      }
+      
+      .navbar{
+        width: 100%;
+        display: flex;
+    }
+  
+    
+    .navbar-title{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        
+    } 
+    .navbar-title h1{
+        font-size: 18px;
+        font-weight: bold;
+        color: #47b5ed;
+        margin: 27px 30px;
+
+    }
+    #menu-icon{
+        display: block;
+
+    }
+    .navbar-icons{
+        width: 150px;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between; 
+        border: 2px solid #6c758f;
+        border-radius: 10px;
+        position: absolute;
+        top: 2%;
+        right:-100%;
+        background:#f2f3f7;
+        transition: all .50s ease;
+        overflow: visible;
+        margin: 112px 0px;
+    }
+    .navbar-icons.open{
+        right: 0;
+    }
+
+    
+    .navbar ul {
+     display: block;
+        
+    }
+
+    .navbar ul li{
+        display: flex;
+
+    }.navbar ul li a{
+        transition: all .5s ease;
+    
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    #contact .headings{
+        font-size: 1.2rem;
+    }
+  .form {
+        width: 320px;
+        margin: 0 auto;
+        height: auto;
+    
+    }
+
+    #services{
+        width: 100%;
+        
+
+
+    }
+    #services .headings{
+        font-size: 1.2rem;
+    }
+    #services .row{
+        width: 300px;
+        display: block;
+    }
+    .box-content{
+        width: 200px;
+        height: 250px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    #portfolio{
+        width: 100%;
+
+    }
+    #portfolio .headings{
+        font-size: 1.2rem;
+    }
+    #portfolio .container{
+        width: 320px;
+        margin: 0 auto;
+        flex-wrap: wrap;
+        margin: 20px auto;
+    }
+    #portfolio .container .box{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+    }
+    #about{
+        width: 100%;
+        
+
+    }
+    #about .headings{
+        font-size: 1.2rem;
+    }
+  
+   
+    #intro{
+        width: 350px;
+        display: block;
+        padding: 25px;
+    }
+    #intro h2{
+        text-align: left;
+        font-size: 1.2rem;
+    }
+    #intro p{
+        text-align: left;
+        font-size: 16px;
+        letter-spacing: normal;
+        line-height: normal;
+    }
+    #home{
+        width: 100%;
+    }
+    #home::before{
+        width: 100%;
+    }
+    .main{
+        width: 150px;
+        height: 100px;
+        position: absolute;
+        top: 50%;
+        left: 30%;
+    }
+    .main .headings{
+        font-size: 1.2rem;
+    }
+    
+    
+      .navbar{
+        width: 100%;
+        display: flex;
+    }
+  
+    
+    .navbar-title{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        
+    } 
+    .navbar-title h1{
+        font-size: 15px;
+        font-weight: bold;
+        color: #47b5ed;
+        margin: 27px 30px;
+
+    }
+    #menu-icon{
+        display: block;
+
+    }
+    .navbar-icons{
+        width: 150px;
+        height: 100vh;
+        display: flex;
+        justify-content: space-between; 
+        border: 2px solid #6c758f;
+        border-radius: 10px;
+        position: absolute;
+        top: 2%;
+        right:-100%;
+        background:#f2f3f7;
+        transition: all .50s ease;
+        overflow: visible;
+        margin: 112px 0px;
+    }
+    .navbar-icons.open{
+        right: 0;
+    }
+
+    
+    .navbar ul {
+     display: block;
+        
+    }
+
+    .navbar ul li{
+        display: flex;
+
+    }.navbar ul li a{
+        transition: all .5s ease;
+        margin: 8px;
+        padding: 8px;
+    
+      }  
+    }
