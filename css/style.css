@@ -258,17 +258,37 @@ img{
     background:#6c758f ;
     margin: 100px auto;
 }
-.box{
-    width: 300px;
-    height: 300px;
-    background-color: #ffffff;
+.box1{
+    width: 600px;
+    height: 600px;
+    background-image: url(../images/Opera\ Snapshot_2023-04-27_235152_index.html.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     float: left;
     margin: 0px 10px;
     transition: 1s;
 }
+
 .box:hover{
     transform: scale(1.5);
-    background: #6c758f;
+    box-shadow: 2px 2px 2px #ffffff;
+    z-index: 2;
+}
+.box2{
+    width: 600px;
+    height: 600px;
+    background-image: url(../images/Opera\ Snapshot_2023-04-28_000836_index.html.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    float: left;
+    margin: 0px 10px;
+    transition: 1s;
+}
+
+.box:hover{
+    transform: scale(1.5);
     box-shadow: 2px 2px 2px #ffffff;
     z-index: 2;
 }
@@ -435,10 +455,18 @@ img{
             justify-content: space-around;
             margin: 20px auto;
         }
-        #portfolio .container .box{
+        #portfolio .container .box1{
             margin-bottom: 25px;
-            width: 250px;
-            height: 250px;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
+            
+        }
+        #portfolio .container .box2{
+            margin-bottom: 25px;
+            width: 400px;
+            height: 400px;
+            margin: 0 auto;
             
         }
         #about{
@@ -591,8 +619,12 @@ img{
         flex-wrap: wrap;
         margin: 20px auto;
     }
-    #portfolio .container .box{
+    #portfolio .container .box1{
         margin-bottom: 25px;
+        width: 200px;
+        height: 200px;
+    }
+    #portfolio .container .box2{
         width: 200px;
         height: 200px;
     }
@@ -739,12 +771,17 @@ img{
           margin: 20px auto;
           gap: 10px;
       }
-      #portfolio .container .box{
+      #portfolio .container .box1{
           width: 200px;
           height: 200px;
           margin: 0 auto;
 
       }
+      #portfolio .container .box2{
+        width: 200px;
+        height: 200px;
+        margin: 0 auto;
+    }
       #about{
           width: 100%;
   
@@ -882,11 +919,16 @@ img{
         flex-wrap: wrap;
         margin: 20px auto;
     }
-    #portfolio .container .box{
+    #portfolio .container .box1{
         width: 200px;
         height: 200px;
         margin: 0 auto;
         margin-bottom: 15px;
+    }
+     #portfolio .container .box2{
+        margin-bottom: 25px;
+        width: 200px;
+        height: 200px;
     }
     #about{
         width: 100%;
